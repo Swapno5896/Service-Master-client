@@ -1,6 +1,6 @@
 # Service-Master
 
-This is service besed project with redux [Service-Master-Live-Site](https://github.com/facebook/create-react-app).
+This is service besed project with redux [Service-Master-Live-Site](https://service-master-b9f43.web.app/).
 
 ## Available Scripts
 
