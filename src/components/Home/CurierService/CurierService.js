@@ -6,7 +6,7 @@ const CurierService = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <h2>The fastest courier service</h2>
+            <h2>Our Storage Service Covers</h2>
             <p>Daily Delivery Specialists For Personal or Business Clients</p>
             <div className="row">
               <div className="col md-6">
@@ -21,6 +21,7 @@ const CurierService = () => {
                 <p>Lorem ipsum dolor sit amet</p>{" "}
                 <p>Vide convenire abhorreant</p>
               </div>
+              <button>SEE ALL SERVICES</button>
             </div>
           </div>
           <div className="col-md-6">
