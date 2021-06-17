@@ -1,6 +1,6 @@
 import React from "react";
 import img1 from "../../../Images/service-1.png";
-import img2 from "../../../Images/service-2.png";
+import img2 from "../../../Images/service-3.png";
 import DescriptionCard from "../DescriptionCard/DescriptionCard";
 const Description = () => {
   const describtionData = [
