@@ -15,7 +15,7 @@ const MainHome = () => {
       <TopBanner></TopBanner>
       <Ques></Ques>
       <Benefits></Benefits>
-      <CurierService></CurierService>
+      {/* <CurierService></CurierService> */}
       <FastCurrier></FastCurrier>
       <WorkingStyle></WorkingStyle>
       <Footer></Footer>

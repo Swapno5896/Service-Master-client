@@ -1,0 +1,11 @@
+@import "../../../Styled//FontSize.scss";
+
+.card-title {
+  font-size: $cardTitile;
+}
+.currierCard {
+  border: 4px solid rgb(165, 159, 159);
+}
+.currierCard:hover {
+  box-shadow: 5px 5px 40px rgb(156, 155, 150);
+}

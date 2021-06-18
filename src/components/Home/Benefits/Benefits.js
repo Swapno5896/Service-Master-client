@@ -1,9 +1,14 @@
 import React from "react";
-
+import "./Benefit.scss";
 const Benefits = () => {
   return (
-    <div>
-      <div className="row">
+    <div className="benefits-container">
+      <img
+        className="benefit-gb-img"
+        src="https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/h2-parallax-1.jpg"
+        alt=""
+      />
+      <div className="row ">
         <div className="col-md-4">
           <div style={{ display: "flex" }}>
             <div>

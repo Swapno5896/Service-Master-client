@@ -1,15 +1,16 @@
 import React from "react";
+import "./WorkingStyle.scss";
 import img1 from "../../../Images/service-1.png";
 const WorkingStyle = () => {
   return (
-    <div>
+    <div className="WorkingStyle-container">
       <div className="row">
-        <div className="col-md-6">
-          <img src={img1} alt="" />
+        <div className="col-md-6 col-sm-12">
+          <img className="WorkingStyle-img" src={img1} alt="" />
         </div>
-        <div className="col-md-6">
-          <h1>Short or long-term storage</h1>
-          <p>
+        <div className="col-md-6 col-sm-12">
+          <h1 className="text-center">Short or long-term storage</h1>
+          <p className="text-center">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
             eveniet autem debitis qui repellat dolore consequatur! Iste, fuga
             repellendus. Asperiores molestiae cupiditate nobis velit blanditiis
@@ -17,7 +18,7 @@ const WorkingStyle = () => {
           </p>
           <div>
             <p>img</p>
-            <p>
+            <p className="text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
               aperiam nemo, ullam repellat consequuntur corporis eaque obcaecati
               possimus. Temporibus incidunt ratione vitae ipsa, doloremque
@@ -26,7 +27,7 @@ const WorkingStyle = () => {
           </div>
           <div>
             <p>img</p>
-            <p>
+            <p className="text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
               aperiam nemo, ullam repellat consequuntur corporis eaque obcaecati
               possimus. Temporibus incidunt ratione vitae ipsa, doloremque

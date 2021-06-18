@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./NavBar.scss";
 const NavBar = () => {
   return (
     <div className="row">
@@ -7,11 +7,15 @@ const NavBar = () => {
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <span>01709112230</span>
-              <span>Mon - Fri 08:00 - 20:00 / Closed on Weekends</span>
+              <span className="upper-nav-text">01709112230</span>
+              <span className="upper-nav-text">
+                Mon - Fri 08:00 - 20:00 / Closed on Weekends
+              </span>
             </div>
             <div class="col-md-4 offset-md-4">
-              <span>© 2021 Qode Interactive, All Rights Reserved</span>
+              <span className="upper-nav-text">
+                © 2021 Qode Interactive, All Rights Reserved
+              </span>
               <span></span>
               <span></span>
               <span></span>
