@@ -53,8 +53,8 @@ const MainPortFolio = () => {
     },
   ];
   return (
-    <div>
-      <div className="row">
+    <div class="d-flex justify-content-center">
+      <div className="row" style={{ padding: "0px 70px" }}>
         {proftfolio.map((dt) => (
           <PortFolioCard dt={dt} />
         ))}
