@@ -1,21 +1,30 @@
 import React from 'react';
 import img1 from '../../../Images/service-1.png'
-const SideBlogs = () => {
+import { SideBlogDataType } from '../MainBlog/MainBlog'
+interface sideblogProps {
+    dt: SideBlogDataType
+
+}
+const SideBlogs: React.FC<sideblogProps> = (props) => {
+    const { authorName, authorImg, title, description, date } = props.dt
     return (
         <div className="card mb-3" style={{ maxWidth: '540px' }}>
-            <div className="row g-0">
-                <div className="col-md-4">
-                    <img className="img-fluid" src={img1} alt="..." />
-                </div>
-                <div className="col-md-8">
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+
+            <div className="card-body">
+                <h5 className="card-title">{title}</h5>
+                <p className="card-text">{description}</p>
+                <div className="row">
+                    <div className="col-md-6">
+                        <img className="img-fluid" src={authorImg} alt="..." />
+                    </div>
+                    <div className="col-md-6">
+                        <p>By {authorName}</p>
+                        <p>{date}</p>
                     </div>
                 </div>
             </div>
         </div>
+
     );
 };
 
