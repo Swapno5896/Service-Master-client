@@ -20,7 +20,7 @@ const BlogCarrd: React.FC<blogCardProps> = (props) => {
 
     return (
         <div className="col-md-4">
-            <div className="card" style={{ width: '18rem' }}>
+            <div onClick={handleClick} className="card" style={{ width: '18rem' }}>
                 <img src={img1} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
@@ -29,7 +29,7 @@ const BlogCarrd: React.FC<blogCardProps> = (props) => {
 
                 <div className="card-body d-flex">
                     <p>{date}</p>
-                    <button onClick={handleClick}>Read More</button>
+                    <button >Read More</button>
                 </div>
             </div>
 
