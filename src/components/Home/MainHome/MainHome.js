@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../NavBar/NavBar";
 
 import TopBanner from "../TopBanner/TopBanner";
 import Benefits from "../Benefits/Benefits";
@@ -50,7 +49,6 @@ const MainHome = () => {
   ];
   return (
     <div>
-      <NavBar></NavBar>
       <TopBanner></TopBanner>
       <Ques></Ques>
       {benefitData.map((dt) => (

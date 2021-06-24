@@ -10,6 +10,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-elastic-carousel": "^0.11.5",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "simple-slider": "^1.0.1",
     "web-vitals": "^1.1.2"
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.11",
+    "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/parser": "^4.27.0",
     "typescript": "^4.3.4"
   }

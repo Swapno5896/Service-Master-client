@@ -1,4 +1,11 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
 import "./NavBar.scss";
 const NavBar = () => {
   return (
@@ -28,9 +35,7 @@ const NavBar = () => {
         <div className="col-md-10 ">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                ServiceMaster
-              </a>
+              <Link to="/"> ServiceMaster</Link>
               <button
                 class="navbar-toggler"
                 type="button"
@@ -45,29 +50,22 @@ const NavBar = () => {
               <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">
-                    HOME
-                  </a>
+                  <Link to="/">HOME</Link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    PAGES
-                  </a>
+                  <Link to="/portfolio">PORTFOLIO</Link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    PRTFOLIO
-                  </a>
+                  <Link to="/blog">BLOG</Link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    BLOG
-                  </a>
+                  <Link to="/shop">SHOP</Link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    SHOP
-                  </a>
+                  <Link to="/about">ABOUT US</Link>
+                </li>
+                <li class="nav-item">
+                  <Link to="/admin">ADMIN</Link>
                 </li>
               </div>
             </div>

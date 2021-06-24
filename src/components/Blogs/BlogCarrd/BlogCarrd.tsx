@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import img1 from '../../../Images/service-1.png'
 import { blogCardDataType } from '../MainBlog/MainBlog'
 interface blogCardProps {
@@ -6,7 +7,17 @@ interface blogCardProps {
 
 }
 const BlogCarrd: React.FC<blogCardProps> = (props) => {
-    const { title, date, discription } = props.dt
+    const { title, date, discription, id } = props.dt
+
+
+
+
+    let history = useHistory();
+
+    function handleClick() {
+        history.push(`/blog/${id}`);
+    }
+
     return (
         <div className="col-md-4">
             <div className="card" style={{ width: '18rem' }}>
@@ -16,8 +27,9 @@ const BlogCarrd: React.FC<blogCardProps> = (props) => {
                     <p className="card-text">{discription}</p>
                 </div>
 
-                <div className="card-body">
+                <div className="card-body d-flex">
                     <p>{date}</p>
+                    <button onClick={handleClick}>Read More</button>
                 </div>
             </div>
 
