@@ -23,50 +23,71 @@ const NavBar = () => {
               <span className="upper-nav-text">
                 © 2021 Qode Interactive, All Rights Reserved
               </span>
+              {/* <span></span>
               <span></span>
               <span></span>
-              <span></span>
-              <span></span>
+              <span></span> */}
             </div>
           </div>
         </div>
       </div>
       <div className="row justify-content-center">
         <div className="col-md-10 ">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid">
-              <Link to="/"> ServiceMaster</Link>
               <button
                 class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#navbarText"
-                aria-controls="navbarText"
+                data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-                <li class="nav-item">
-                  <Link to="/">HOME</Link>
-                </li>
-                <li class="nav-item">
-                  <Link to="/portfolio">PORTFOLIO</Link>
-                </li>
-                <li class="nav-item">
-                  <Link to="/blog">BLOG</Link>
-                </li>
-                <li class="nav-item">
-                  <Link to="/shop">SHOP</Link>
-                </li>
-                <li class="nav-item">
-                  <Link to="/about">ABOUT US</Link>
-                </li>
-                <li class="nav-item">
-                  <Link to="/admin">ADMIN</Link>
-                </li>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">
+                  Service Master
+                </a>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item pe-4">
+                    <Link className="nav-link" to="/">
+                      Home
+                    </Link>
+                  </li>
+                  <li class="nav-item pe-4">
+                    <Link className="nav-link" to="/blog">
+                      Blog
+                    </Link>
+                  </li>
+                  <li class="nav-item pe-4">
+                    <Link className="nav-link" to="/portfolio">
+                      Portfolio
+                    </Link>
+                  </li>{" "}
+                  <li class="nav-item pe-4">
+                    <Link className="nav-link" to="/shop">
+                      Shop
+                    </Link>
+                  </li>
+                  <li class="nav-item pe-4">
+                    <Link className="nav-link" to="/admin">
+                      Admin
+                    </Link>
+                  </li>
+                </ul>
+                {/* <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form> */}
               </div>
             </div>
           </nav>

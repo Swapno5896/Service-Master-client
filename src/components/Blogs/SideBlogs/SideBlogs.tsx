@@ -18,7 +18,7 @@ const SideBlogs: React.FC<sideblogProps> = (props) => {
                         <img className="img-fluid" src={authorImg} alt="..." />
                     </div>
                     <div className="col-md-6">
-                        <p>By {authorName}</p>
+                        <p>By : {authorName}</p>
                         <p>{date}</p>
                     </div>
                 </div>

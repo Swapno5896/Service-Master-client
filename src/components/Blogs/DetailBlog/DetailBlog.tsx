@@ -29,7 +29,7 @@ const DetailBlog = () => {
                     </div>
                     <BlogComments></BlogComments>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4" style={{ height: '680px', overflow: 'scroll' }}>
                     {
                         fakeSideBlog.map(dt => <SideBlogs dt={dt} />)
                     }

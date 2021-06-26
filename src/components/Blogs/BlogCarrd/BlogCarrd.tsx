@@ -19,8 +19,8 @@ const BlogCarrd: React.FC<blogCardProps> = (props) => {
     }
 
     return (
-        <div className="col-md-4">
-            <div onClick={handleClick} className="card" style={{ width: '18rem' }}>
+        <div className="col-md-4 mt-4">
+            <div onClick={handleClick} className="card" style={{ width: '22rem' }}>
                 <img src={img1} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
@@ -28,7 +28,7 @@ const BlogCarrd: React.FC<blogCardProps> = (props) => {
                 </div>
 
                 <div className="card-body d-flex">
-                    <p>{date}</p>
+                    <p className='me-auto'>{date}</p>
                     <button >Read More</button>
                 </div>
             </div>
