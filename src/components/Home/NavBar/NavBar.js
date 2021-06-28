@@ -23,10 +23,6 @@ const NavBar = () => {
               <span className="upper-nav-text">
                 © 2021 Qode Interactive, All Rights Reserved
               </span>
-              {/* <span></span>
-              <span></span>
-              <span></span>
-              <span></span> */}
             </div>
           </div>
         </div>
@@ -47,9 +43,9 @@ const NavBar = () => {
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="#">
+                <Link className="nav-link" to="/">
                   Service Master
-                </a>
+                </Link>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item pe-4">
                     <Link className="nav-link" to="/">

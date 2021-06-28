@@ -7,19 +7,20 @@ interface blogCardProps {
 
 }
 const BlogCarrd: React.FC<blogCardProps> = (props) => {
-    const { title, date, discription, id } = props.dt
+    const { title, date, discription, _id } = props.dt
 
+    // console.log('_id from blog', _id);
 
 
 
     let history = useHistory();
 
     function handleClick() {
-        history.push(`/blog/${id}`);
+        history.push(`/blog/${_id}`);
     }
 
     return (
-        <div className="col-md-4 mt-4">
+        <div className="col-md-4 mt-4 col-sm-6">
             <div onClick={handleClick} className="card" style={{ width: '22rem' }}>
                 <img src={img1} className="card-img-top" alt="..." />
                 <div className="card-body">

@@ -96,7 +96,7 @@ const MainShop = () => {
     },
   ];
   return (
-    <div>
+    <>
       <div className="row">
         <div className="col-md-8">
           <div className="row">
@@ -105,13 +105,16 @@ const MainShop = () => {
             ))}
           </div>
         </div>
-        <div className="col-md-4">
+        <div
+          className="col-md-4"
+          style={{ height: "680px", overflow: "scroll" }}
+        >
           {shopData.map((dt) => (
             <SideBar dt={dt} />
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -6,11 +6,19 @@ import {
     Link,
     NavLink,
 } from "react-router-dom";
-const AdminSidebar = () => {
+interface Iprops {
+    openModal: () => void
+}
+const AdminSidebar: React.FC<Iprops> = ({ openModal }) => {
     return (
         <div >
-            <Link to="/addBlog">Add Blog</Link>
-            <Link to="/deletBlog">Delet Blog</Link>
+            <button onClick={openModal}>
+                <Link to="/addBlog">Add Blog</Link>
+            </button>
+            <button>
+                <Link to="/deletBlog">Delet Blog</Link>
+            </button>
+
         </div>
     );
 };

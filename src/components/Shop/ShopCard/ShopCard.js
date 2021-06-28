@@ -4,7 +4,7 @@ const ShopCard = (props) => {
   const { Img, Title, Rating, PrivuousPrice, CurrentPrice, Description } =
     props.dt;
   return (
-    <div className="col-md-4">
+    <div className="col-md-4 mt-4">
       <div className="card h-100">
         <img src={Img} className="card-img-top" alt="..." />
         <div className="card-body">

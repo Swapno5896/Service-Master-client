@@ -11,16 +11,30 @@ import AddBlog from '../AddBlog/AddBlog';
 import DeletBlog from '../DeletBlog/DeletBlog';
 
 const MainAdmin = () => {
+
+    // modal
+
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+
+
+    function closeModal() {
+        setIsOpen(false);
+    }
     return (
         <div className='row'>
 
             <Router>
 
-                <AdminSidebar />
+                <AdminSidebar openModal={openModal} />
 
                 <switch>
                     <Route path='/addBlog'>
-                        <AddBlog />
+                        <AddBlog openModal={openModal} modalIsOpen={modalIsOpen} closeModal={closeModal} />
                     </Route>
                     <Route path='/deletBlog'>
                         <DeletBlog />
