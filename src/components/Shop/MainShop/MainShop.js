@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
 import img1 from "../../../Images/service-1.png";
 import ShopCard from "../ShopCard/ShopCard";
 import SideBar from "../SideBar/SideBar";
-const MainShop = () => {
+import { loadProductAsync } from "../../../redux/action/action";
+
+const mapDispatchToProps = {
+  loadProductAsync,
+};
+
+const mapStateToProps = (state) => {
+  return {
+    product: state.product.product,
+  };
+};
+const MainShop = (props) => {
+  useEffect(() => {
+    props.loadProductAsync();
+  }, []);
+  console.log("props from shop", props.product);
   const shopData = [
     {
       Img: img1,
@@ -95,9 +111,15 @@ const MainShop = () => {
         "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis exercitationem natus quo doloribus, enim et maxime. Aperiam perspiciatis repellat vero voluptate eligendi adipisci eum porro assumenda harum, ab sed alias        ",
     },
   ];
+
   return (
     <>
-      <div className="row">
+      <ol>
+        {props.product?.map((pd) => (
+          <li>{pd.name}</li>
+        ))}
+      </ol>
+      {/* <div className="row">
         <div className="col-md-8">
           <div className="row">
             {shopData.map((dt) => (
@@ -113,9 +135,9 @@ const MainShop = () => {
             <SideBar dt={dt} />
           ))}
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
 
-export default MainShop;
+export default connect(mapStateToProps, mapDispatchToProps)(MainShop);

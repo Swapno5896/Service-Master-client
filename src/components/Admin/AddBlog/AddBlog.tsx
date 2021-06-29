@@ -21,7 +21,8 @@ Modal.setAppElement('#root');
 const AddBlog: React.FC<Iprops> = ({ openModal, modalIsOpen, closeModal }) => {
 
 
-    const [blog, setBlog] = useState({ title: '', Content: '', imgFile: Image });
+    const [blog, setBlog] = useState({ title: '', Content: '' });
+    const [file, setFile] = useState<FileList | null | any>(null)
     const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
 
         setBlog({
@@ -29,17 +30,60 @@ const AddBlog: React.FC<Iprops> = ({ openModal, modalIsOpen, closeModal }) => {
         })
     }
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const newFile = e.target.value[0]
-        console.log(newFile);
+        const target = e.target as HTMLInputElement;
+        const files = target.files;
+        setFile(files);
 
     }
     const handlSubmit = (event: React.MouseEvent<HTMLInputElement>) => {
-        console.log(blog);
-        fetch(`http://localhost:9000/addBlog`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(blog),
-        });
+
+
+
+        const formData = new FormData()
+        formData.append('myFile', file)
+        formData.append('name', 'swapno')
+        fetch('http://localhost:9000/addBlog', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+            })
+            .catch(error => {
+                console.error(error)
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // console.log(blog);
+        // fetch(`http://localhost:9000/addBlog`, {
+        //     method: "POST",
+        //     headers: { "Content-Type": "application/json" },
+        //     body: JSON.stringify(blog),
+        // });
+
+
+
+
+
+
     }
 
     return (
