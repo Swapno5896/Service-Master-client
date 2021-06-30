@@ -5,10 +5,10 @@ const initState = {
   portfoilo: [],
   product: [],
   cart: [],
-  isLoading: false,
+  isLoading: true,
 };
 
-export const ProductReducer = (state = initState.product, action) => {
+const ProductReducer = (state = initState.product, action) => {
   switch (action.type) {
     case type.LOAD_PRODUCT:
       return {
@@ -42,9 +42,21 @@ const PortfolioReducer = (state = initState.portfoilo, action) => {
   }
 };
 
+const loadingReducer = (state = initState.isLoading, action) => {
+  switch (action.type) {
+    case type.ISLOADING:
+      return {
+        ...state,
+        isLoading: action.payload,
+      };
+    default:
+      return state;
+  }
+};
 const Reducers = combineReducers({
   blog: BlogReducer,
   portfoilo: PortfolioReducer,
   product: ProductReducer,
+  isLoading: loadingReducer,
 });
 export default Reducers;

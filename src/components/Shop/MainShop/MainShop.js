@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import img1 from "../../../Images/service-1.png";
-import ShopCard from "../ShopCard/ShopCard";
-import SideBar from "../SideBar/SideBar";
+// import ShopCard from "../ShopCard/ShopCard";
+// import SideBar from "../SideBar/SideBar";
 import { loadProductAsync } from "../../../redux/action/action";
 
 const mapDispatchToProps = {
@@ -12,13 +12,15 @@ const mapDispatchToProps = {
 const mapStateToProps = (state) => {
   return {
     product: state.product.product,
+    isloading: state.isLoading,
   };
 };
 const MainShop = (props) => {
   useEffect(() => {
     props.loadProductAsync();
   }, []);
-  console.log("props from shop", props.product);
+  console.log("props from shop", props);
+  console.log("loading info", props.isloading);
   const shopData = [
     {
       Img: img1,
@@ -112,8 +114,26 @@ const MainShop = (props) => {
     },
   ];
 
+  if (props.isloading == true) {
+    return (
+      <div
+        style={{ height: "700px" }}
+        class="d-flex justify-content-center align-items-center"
+      >
+        <div
+          style={{ width: "3rem", height: "3rem" }}
+          class="spinner-border"
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
   return (
-    <>
+    <div>
+      {/* <h1>{props.isloading}</h1> */}
+
       <ol>
         {props.product?.map((pd) => (
           <li>{pd.name}</li>
@@ -136,7 +156,7 @@ const MainShop = (props) => {
           ))}
         </div>
       </div> */}
-    </>
+    </div>
   );
 };
 
