@@ -9,51 +9,50 @@ import WorkingStyle from "../WorkingStyle/WorkingStyle";
 import Ques from "../Ques/Ques";
 import img1 from "../../../Images/service-1.png";
 const MainHome = () => {
-  const benefitData = [
-    {
-      img: img1,
-      title: "Pack&Unpack",
-      description:
-        " An duo lorem altera gloriatur. No imperdiet adver sarium pro. Nosit sumo lorem. Mei ea eius elitr consequ untur. In mel aeterno.",
-    },
-    {
-      img: img1,
-      title: "Auto Transport",
-      description:
-        " An duo lorem altera gloriatur. No imperdiet adver sarium pro. Nosit sumo lorem. Mei ea eius elitr consequ untur. In mel aeterno.",
-    },
-    {
-      img: img1,
-      title: "Special Offers",
-      description:
-        " An duo lorem altera gloriatur. No imperdiet adver sarium pro. Nosit sumo lorem. Mei ea eius elitr consequ untur. In mel aeterno.",
-    },
-    {
-      img: img1,
-      title: "Moving Protection",
-      description:
-        " An duo lorem altera gloriatur. No imperdiet adver sarium pro. Nosit sumo lorem. Mei ea eius elitr consequ untur. In mel aeterno.",
-    },
-    {
-      img: img1,
-      title: "Cleaning Service",
-      description:
-        " An duo lorem altera gloriatur. No imperdiet adver sarium pro. Nosit sumo lorem. Mei ea eius elitr consequ untur. In mel aeterno.",
-    },
-    {
-      img: img1,
-      title: "Storage Offers",
-      description:
-        " An duo lorem altera gloriatur. No imperdiet adver sarium pro. Nosit sumo lorem. Mei ea eius elitr consequ untur. In mel aeterno.",
-    },
-  ];
+  // const benefitData = [
+  //   {
+  //     img: img1,
+  //     title: "Pack&Unpack",
+  //     description:
+  //       " An duo lorem altera gloriatur. No imperdiet adver sarium pro. Nosit sumo lorem. Mei ea eius elitr consequ untur. In mel aeterno.",
+  //   },
+  //   {
+  //     img: img1,
+  //     title: "Auto Transport",
+  //     description:
+  //       " An duo lorem altera gloriatur. No imperdiet adver sarium pro. Nosit sumo lorem. Mei ea eius elitr consequ untur. In mel aeterno.",
+  //   },
+  //   {
+  //     img: img1,
+  //     title: "Special Offers",
+  //     description:
+  //       " An duo lorem altera gloriatur. No imperdiet adver sarium pro. Nosit sumo lorem. Mei ea eius elitr consequ untur. In mel aeterno.",
+  //   },
+  //   {
+  //     img: img1,
+  //     title: "Moving Protection",
+  //     description:
+  //       " An duo lorem altera gloriatur. No imperdiet adver sarium pro. Nosit sumo lorem. Mei ea eius elitr consequ untur. In mel aeterno.",
+  //   },
+  //   {
+  //     img: img1,
+  //     title: "Cleaning Service",
+  //     description:
+  //       " An duo lorem altera gloriatur. No imperdiet adver sarium pro. Nosit sumo lorem. Mei ea eius elitr consequ untur. In mel aeterno.",
+  //   },
+  //   {
+  //     img: img1,
+  //     title: "Storage Offers",
+  //     description:
+  //       " An duo lorem altera gloriatur. No imperdiet adver sarium pro. Nosit sumo lorem. Mei ea eius elitr consequ untur. In mel aeterno.",
+  //   },
+  // ];
   return (
     <div>
       <TopBanner></TopBanner>
       <Ques></Ques>
-      {benefitData.map((dt) => (
-        <Benefits dt={dt} />
-      ))}
+
+      <Benefits />
 
       {/* <CurierService></CurierService> */}
       <FastCurrier></FastCurrier>

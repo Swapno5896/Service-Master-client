@@ -1,11 +1,27 @@
 import * as type from "../actionType/actionType";
-
+// asynce operation
 export const loadProductAsync = (products) => {
   return {
     type: "LOAD_PRODUCT_ASYNC",
     payload: products,
   };
 };
+
+export const loadPortfolioAsync = (portfolio) => {
+  return {
+    type: "LOAD_PORTFOLIO_ASYNC",
+    payload: portfolio,
+  };
+};
+
+export const loadBlogAsync = (Blog) => {
+  return {
+    type: "LOAD_BLOG_ASYNC",
+    payload: Blog,
+  };
+};
+
+// common operation
 export const loadProduct = (products) => {
   return {
     type: type.LOAD_PRODUCT,

@@ -15,7 +15,7 @@ export function getPortfolio() {
 }
 
 export function getBlog() {
-  return fetch("https://jsonplaceholder.typicode.com/users")
+  return fetch("https://cryptic-chamber-61162.herokuapp.com/getBlog")
     .then((res) => res.json())
     .catch((err) => {
       throw err;

@@ -19,8 +19,8 @@ const MainShop = (props) => {
   useEffect(() => {
     props.loadProductAsync();
   }, []);
-  console.log("props from shop", props);
-  console.log("loading info", props.isloading);
+  // console.log("props from shop", props);
+  // console.log("loading info", props.isloading);
   const shopData = [
     {
       Img: img1,

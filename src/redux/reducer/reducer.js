@@ -27,7 +27,10 @@ const ProductReducer = (state = initState.product, action) => {
 const BlogReducer = (state = initState.blog, action) => {
   switch (action.type) {
     case type.LOAD_Blog:
-      return state;
+      return {
+        ...state,
+        blog: action.payload,
+      };
     default:
       return state;
   }
@@ -36,7 +39,10 @@ const BlogReducer = (state = initState.blog, action) => {
 const PortfolioReducer = (state = initState.portfoilo, action) => {
   switch (action.type) {
     case type.LOAD_PORTFOLIO:
-      return state;
+      return {
+        ...state,
+        portfoilo: action.payload,
+      };
     default:
       return state;
   }

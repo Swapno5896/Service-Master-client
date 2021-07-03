@@ -25,8 +25,8 @@ const FastCurrier = () => {
   ];
   return (
     <div>
-      <div className="container">
-        <h2 className="text-center">Moving Services</h2>
+      <div className="container mt-5">
+        <h2 className="text-center pb-4">Moving Services</h2>
         <div className="row">
           {fastData.map((dt) => (
             <FastCurrierCard dt={dt}></FastCurrierCard>

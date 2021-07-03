@@ -4,7 +4,7 @@ import MainHome from "../src/components/Home/MainHome/MainHome";
 import MainAbout from "./components/AboutUs/MainAbout/MainAbout";
 import MainShop from "./components/Shop/MainShop/MainShop";
 import MainPortFolio from "./components/PortFolio/MainPortFolio/MainPortFolio";
-import MainBlog from "../src/components/Blogs/MainBlog/MainBlog.tsx";
+import MainBlog from "../src/components/Blogs/MainBlog/MainBlog.js";
 import DetailBlog from "./components/Blogs/DetailBlog/DetailBlog.tsx";
 import MainAdmin from "./components/Admin/MainAdmin/MainAdmin";
 import NavBar from "./components/Home/NavBar/NavBar";

@@ -15,7 +15,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
   return (
-    <div className="row">
+    <div
+      style={{ backgroundColor: "#373737", color: "white", paddingTop: "20px" }}
+      className="row"
+    >
       <div className="col-md-4 offset-md-2">
         <h2>Service Master</h2>
         <p> Level-4, 34, Awal Centre, Banani, Dhaka</p>

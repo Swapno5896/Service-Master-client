@@ -9,6 +9,7 @@ const FastCurrierCard = (props) => {
         <div className="card-body">
           <h5 className="card-title text-center">{title}</h5>
           <p className="card-text text-center">{description}</p>
+          <button className="ques-btn">See Price</button>
         </div>
       </div>
     </div>
