@@ -57,7 +57,6 @@ const MainHome = () => {
       {/* <CurierService></CurierService> */}
       <FastCurrier></FastCurrier>
       <WorkingStyle></WorkingStyle>
-      <Footer></Footer>
     </div>
   );
 };

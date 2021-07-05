@@ -23,7 +23,7 @@ const MainPortFolio = (props) => {
     return (
       <div
         style={{ height: "700px" }}
-        class="d-flex justify-content-center align-items-center"
+        class="d-flex justify-content-center align-items-center "
       >
         <div
           style={{ width: "3rem", height: "3rem" }}
@@ -87,7 +87,7 @@ const MainPortFolio = (props) => {
   ];
 
   return (
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center pb-5 mp-5">
       <div className="row" style={{ padding: "0px 70px" }}>
         {proftfolio.map((dt) => (
           <PortFolioCard dt={dt} />

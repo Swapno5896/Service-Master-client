@@ -27,7 +27,7 @@ const Footer = () => {
         <small>(Available : 09:00am to 7:00pm)</small>
       </div>
       <div className="col-md-2 ">
-        <Link className="nav-link" to="/blog">
+        {/* <Link className="nav-link" to="/blog">
           Blog
         </Link>
         <Link className="nav-link" to="/portfolio">
@@ -35,7 +35,7 @@ const Footer = () => {
         </Link>
         <Link className="nav-link" to="/shop">
           Shop
-        </Link>
+        </Link> */}
         <div>
           <span>
             <FontAwesomeIcon icon={faFacebookF} />

@@ -8,6 +8,7 @@ import MainBlog from "../src/components/Blogs/MainBlog/MainBlog.js";
 import DetailBlog from "./components/Blogs/DetailBlog/DetailBlog.tsx";
 import MainAdmin from "./components/Admin/MainAdmin/MainAdmin";
 import NavBar from "./components/Home/NavBar/NavBar";
+import Footer from "../src/components/Home/Footer/Footer";
 const App = () => {
   return (
     <div>
@@ -38,6 +39,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
+      <Footer></Footer>
     </div>
   );
 };
