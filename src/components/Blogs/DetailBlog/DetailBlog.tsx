@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import BlogComments from './../BlogComments/BlogComments';
-import SideBlogs from './../SideBlogs/SideBlogs';
+// import SideBlogs from './../SideBlogs/SideBlogs';
 
 // import img from '../../../Images/service-1.png'
 interface Idetail {

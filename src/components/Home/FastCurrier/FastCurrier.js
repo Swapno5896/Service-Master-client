@@ -1,6 +1,5 @@
 import React from "react";
 import img1 from "../../../Images/service-1.png";
-import service from "../../../Images/service-1.png";
 import FastCurrierCard from "../FastCurrierCard/FastCurrierCard";
 const FastCurrier = () => {
   const fastData = [

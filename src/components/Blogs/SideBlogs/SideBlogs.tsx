@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../../Images/service-1.png'
+// import img1 from '../../../Images/service-1.png'
 interface sideblogProps {
     dt: {
         title: string;

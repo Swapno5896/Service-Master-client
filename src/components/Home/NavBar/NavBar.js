@@ -1,10 +1,8 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+
   Link,
-  NavLink,
+ 
 } from "react-router-dom";
 import "./NavBar.css";
 const NavBar = () => {

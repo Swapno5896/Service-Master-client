@@ -4,7 +4,7 @@ import BlogCarrd from "../BlogCarrd/BlogCarrd";
 // import SideBlogs from './../SideBlogs/SideBlogs';
 // import DetailBlog from '../DetailBlog/DetailBlog'
 import img1 from "../../../Images/service-1.png";
-import { useState } from "react";
+// import { useState } from "react";
 import { connect } from "react-redux";
 
 import { loadBlogAsync } from "../../../redux/action/action";
@@ -63,7 +63,7 @@ const MainBlog = (props) => {
   //     { authorName: 'Olivia Rose', authorImg: img1, title: 'Service At Home', description: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt tempora dolorum quod saepe ipsam voluptatibus', date: 'March 22, 2017' },
 
   // ]
-  if (props.isloading?.isLoading == true) {
+  if (props.isloading?.isLoading === true) {
     return (
       <div
         style={{ height: "700px" }}

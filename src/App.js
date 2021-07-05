@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MainHome from "../src/components/Home/MainHome/MainHome";
 import MainAbout from "./components/AboutUs/MainAbout/MainAbout";
 import MainShop from "./components/Shop/MainShop/MainShop";
@@ -38,8 +38,9 @@ const App = () => {
             <MainAdmin />
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
-      <Footer></Footer>
+
     </div>
   );
 };
