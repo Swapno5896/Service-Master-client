@@ -23,7 +23,7 @@ const Ques = () => {
     },
   ];
   return (
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center pt-5 mt-5">
       <div className="row w-90">
         {fastQues.map((dt) => (
           <FastCurrierCard dt={dt}></FastCurrierCard>

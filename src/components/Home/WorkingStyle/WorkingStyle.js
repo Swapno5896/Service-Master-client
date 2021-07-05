@@ -3,13 +3,13 @@ import "./WorkingStyle.scss";
 import img1 from "../../../Images/service-1.png";
 const WorkingStyle = () => {
   return (
-    <div className="WorkingStyle-container">
+    <div className="WorkingStyle-container p-5">
       <div className="row">
         <div className="col-md-6 col-sm-12">
           <img className="WorkingStyle-img" src={img1} alt="" />
         </div>
         <div className="col-md-6 col-sm-12">
-          <h1 className="text-center">Short or long-term storage</h1>
+          <h1 className="text-center pb-3">Short or long-term storage</h1>
           <p className="text-center">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
             eveniet autem debitis qui repellat dolore consequatur! Iste, fuga

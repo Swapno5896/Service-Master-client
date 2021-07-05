@@ -6,7 +6,7 @@ import {
   Link,
   NavLink,
 } from "react-router-dom";
-import "./NavBar.scss";
+import "./NavBar.css";
 const NavBar = () => {
   return (
     <div className="row">
