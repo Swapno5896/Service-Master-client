@@ -7,16 +7,17 @@ const CurierService = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <h2>Our Storage Service Covers</h2>
+            <h2 className='m-4'>Our Storage Service Covers</h2>
             <p>Daily Delivery Specialists For Personal or Business Clients</p>
             <div className="row">
-              <ul className="col md-6">
+              <ul className="col md-6
+              curiier-list">
                 <li>No nec meis docendi</li>
                 <li>Cum electram definitionem</li> <li>Rebum munere ex mea</li>{" "}
                 <li>Lorem ipsum dolor sit amet</li>{" "}
                 <li>Vide convenire abhorreant</li>
               </ul>
-              <ul className="col md-6">
+              <ul className="col md-6 curiier-list">
                 <li>No nec meis docendi</li>
                 <li>Cum electram definitionem</li> <li>Rebum munere ex mea</li>{" "}
                 <li>Lorem ipsum dolor sit amet</li>{" "}

@@ -1,0 +1,16 @@
+.footer-container{
+ background-color: #373737;
+ color: white;
+
+ padding-top: 67px;
+ padding-bottom: 30px;
+}
+.footer-link .nav-link{
+ font-size: 20px;
+ color: gold;
+}
+
+.footer-icons span{
+ padding-left: 10px;
+ font-size: 25px;
+}

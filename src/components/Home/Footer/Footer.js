@@ -2,7 +2,7 @@ import React from "react";
 import {
 
   Link,
- 
+
 } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import curds from "../../../Images/cards.png";
@@ -11,11 +11,12 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import './Footer.css'
 const Footer = () => {
   return (
     <div
-      style={{ backgroundColor: "#373737", color: "white", paddingTop: "20px" }}
-      className="row"
+      style={{ color: "white", paddingTop: "20px" }}
+      className="row footer-container"
     >
       <div className="col-md-4 offset-md-2">
         <h2>Service Master</h2>
@@ -24,9 +25,10 @@ const Footer = () => {
         <p> Helpline : 01322810867 , 01322810882</p>
         <small>(Available : 09:00am to 7:00pm)</small>
       </div>
-      <div className="col-md-2 ">
+      <div className="col-md-2 footer-link">
         <Link className="nav-link" to="/blog">
           Blog
+
         </Link>
         <Link className="nav-link" to="/portfolio">
           Portfolio
@@ -34,7 +36,7 @@ const Footer = () => {
         <Link className="nav-link" to="/shop">
           Shop
         </Link>
-        <div>
+        <div className='footer-icons'>
           <span>
             <FontAwesomeIcon icon={faFacebookF} />
           </span>

@@ -3,7 +3,7 @@ import "./WorkingStyle.scss";
 import img1 from "../../../Images/service-1.png";
 const WorkingStyle = () => {
   return (
-    <div className="WorkingStyle-container pb-5 mb-5">
+    <div className="WorkingStyle-container p-5 m-5">
       <div className="row">
         <div className="col-md-6 col-sm-12">
           <img className="WorkingStyle-img" src={img1} alt="" />
