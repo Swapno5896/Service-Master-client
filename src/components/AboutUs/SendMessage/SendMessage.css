@@ -1,0 +1,11 @@
+.message-continer{
+height: 544px;
+}
+.message-section{
+    width: 60%;
+    height: 100px;
+    background-color: rgb(205, 224, 224);
+}
+.message-section p{
+    font-size: 20px;
+}

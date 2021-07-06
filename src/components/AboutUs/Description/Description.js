@@ -27,7 +27,7 @@ const Description = () => {
     },
   ];
   return (
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center pb-5 mb-5">
       <div className="row w-75">
         {describtionData.map((dt) => (
           <DescriptionCard dt={dt} />

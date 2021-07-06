@@ -1,5 +1,5 @@
 import React from "react";
-
+import MainAbout from '../../AboutUs/MainAbout/MainAbout'
 import TopBanner from "../TopBanner/TopBanner";
 import Benefits from "../Benefits/Benefits";
 import FastCurrier from "../FastCurrier/FastCurrier";
@@ -13,6 +13,7 @@ const MainHome = () => {
       <Ques></Ques>
       <Benefits />
       <FastCurrier></FastCurrier>
+      <MainAbout/>
       <WorkingStyle></WorkingStyle>
     </div>
   );

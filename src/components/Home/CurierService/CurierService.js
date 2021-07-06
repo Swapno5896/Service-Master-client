@@ -3,7 +3,7 @@ import "./CurrierService.scss";
 import service from "../../../Images/service-1.png";
 const CurierService = () => {
   return (
-    <div>
+    <div className='pb-3'>
       <div className="container">
         <div className="row">
           <div className="col-md-6">
@@ -29,7 +29,7 @@ const CurierService = () => {
             <img style={{ width: "100%" }} src={service} alt="" />
           </div>
         </div>
-        <button className="all-service-btn">SEE ALL SERVICES</button>
+        {/* <button className="all-service-btn">SEE ALL SERVICES</button> */}
       </div>
     </div>
   );
