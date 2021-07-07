@@ -48,14 +48,50 @@ const MainBlog = (props) => {
   useEffect(() => {
     props.loadBlogAsync();
   }, []);
-  // const fakeBlog = [
-  //     { img: 'https://i.ibb.co/9wHK9kb/Getty-Images-974683580.jpg', title: 'Refresh Tired Walls', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,' },
-  //     { img: 'https://i.ibb.co/9wHK9kb/Getty-Images-974683580.jpg', title: 'Refresh Tired Walls', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,' },
-  //     { img: 'https://i.ibb.co/9wHK9kb/Getty-Images-974683580.jpg', title: 'Refresh Tired Walls', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,' },
-  //     { img: 'https://i.ibb.co/9wHK9kb/Getty-Images-974683580.jpg', title: 'Refresh Tired Walls', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,' },
-  //     { img: 'https://i.ibb.co/9wHK9kb/Getty-Images-974683580.jpg', title: 'Refresh Tired Walls', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,' },
-  //     { img: 'https://i.ibb.co/9wHK9kb/Getty-Images-974683580.jpg', title: 'Refresh Tired Walls', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,' },
-  // ]
+
+  const uploadBlog = () => {
+    fetch('http://localhost:9000/addBlog', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(fakeBlog),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
+  const fakeBlog = [
+    {
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post15.jpg
+      `, title: 'Refresh Tired Walls', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
+    },
+    {
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-12.jpg
+      `, title: 'Customer Connections', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
+    },
+    {
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-17-800x600.jpg
+      `, title: 'One Call Does It All', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
+    },
+    {
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-7-800x600.jpg
+      `, title: 'Make Moving Easy', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
+    },
+    {
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-8.jpg
+      `, title: 'Refresh Tired Walls', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
+    },
+    {
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-6.jpg
+      `, title: 'Outdoor Space', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
+    },
+  ]
+
   // const fakeSideBlog = [
   //     { authorName: 'Olivia Rose', authorImg: img1, title: 'Service At Home', description: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt tempora dolorum quod saepe ipsam voluptatibus', date: 'March 22, 2017' },
   //     { authorName: 'Olivia Rose', authorImg: img1, title: 'Service At Home', description: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt tempora dolorum quod saepe ipsam voluptatibus', date: 'March 22, 2017' },
@@ -82,6 +118,8 @@ const MainBlog = (props) => {
   return (
     <>
       <div className="d-flex justify-content-center">
+        <button onClick={uploadBlog}>upload blog</button>
+
         <div className="row w-75">
           {props.Blog?.map((dt) => (
             <BlogCarrd dt={dt} />

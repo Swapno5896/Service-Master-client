@@ -6,7 +6,8 @@ const WorkingStyle = () => {
     <div className="WorkingStyle-container p-5 m-5">
       <div className="row">
         <div className="col-md-6 col-sm-12">
-          <img className="WorkingStyle-img" src={img1} alt="" />
+          <img className="WorkingStyle-img" src='https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/h2-img-6.jpg'
+            alt="" />
         </div>
         <div className="col-md-6 col-sm-12">
           <h1 className="text-center pb-3">Short or long-term storage</h1>

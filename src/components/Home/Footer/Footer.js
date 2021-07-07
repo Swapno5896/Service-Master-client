@@ -15,7 +15,7 @@ import './Footer.css'
 const Footer = () => {
   return (
     <div
-      style={{ color: "white", paddingTop: "20px" }}
+
       className="row footer-container"
     >
       <div className="col-md-4 offset-md-2">

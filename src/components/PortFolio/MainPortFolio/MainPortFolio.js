@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import PortFolioCard from "../PortFolioCard/PortFolioCard";
-import Img from "../../../Images/service-1.png";
 import { loadPortfolioAsync } from "../../../redux/action/action";
 import { connect } from "react-redux";
 const mapDispatchToProps = {
@@ -35,51 +34,74 @@ const MainPortFolio = (props) => {
       </div>
     );
   }
+  const uploadBlog = () => {
+    fetch('http://localhost:9000/addPortfolio', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(proftfolio),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
   const proftfolio = [
     {
-      Img,
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/h9-port-img-15.jpg
+      `,
       Titile: "Corporate Center",
       Description:
         "        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis earum, laborum nesciunt asperiores repellendus reiciendis praesentium similique molestias consectetur, amet accusamus! Repudiandae minima rem facere laudantium reiciendis odio iure in        ",
     },
     {
-      Img,
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/h9-port-img-16.jpg`,
       Titile: "Corporate Center",
       Description:
         "        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis earum, laborum nesciunt asperiores repellendus reiciendis praesentium similique molestias consectetur, amet accusamus! Repudiandae minima rem facere laudantium reiciendis odio iure in        ",
     },
     {
-      Img,
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/h10-port-img-1.jpg
+      `,
       Titile: "Corporate Center",
       Description:
         "        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis earum, laborum nesciunt asperiores repellendus reiciendis praesentium similique molestias consectetur, amet accusamus! Repudiandae minima rem facere laudantium reiciendis odio iure in        ",
     },
     {
-      Img,
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/h10-port-img-2.jpg
+      `,
       Titile: "Corporate Center",
       Description:
         "        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis earum, laborum nesciunt asperiores repellendus reiciendis praesentium similique molestias consectetur, amet accusamus! Repudiandae minima rem facere laudantium reiciendis odio iure in        ",
     },
     {
-      Img,
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/h9-port-img-9.jpg
+      `,
       Titile: "Corporate Center",
       Description:
         "        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis earum, laborum nesciunt asperiores repellendus reiciendis praesentium similique molestias consectetur, amet accusamus! Repudiandae minima rem facere laudantium reiciendis odio iure in        ",
     },
     {
-      Img,
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/h9-port-img-10.jpg
+      `,
       Titile: "Corporate Center",
       Description:
         "        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis earum, laborum nesciunt asperiores repellendus reiciendis praesentium similique molestias consectetur, amet accusamus! Repudiandae minima rem facere laudantium reiciendis odio iure in        ",
     },
     {
-      Img,
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/h9-port-img-11.jpg
+      `,
       Titile: "Corporate Center",
       Description:
         "        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis earum, laborum nesciunt asperiores repellendus reiciendis praesentium similique molestias consectetur, amet accusamus! Repudiandae minima rem facere laudantium reiciendis odio iure in        ",
     },
     {
-      Img,
+      img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/h9-port-img-12.jpg
+      `,
       Titile: "Corporate Center",
       Description:
         "        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis earum, laborum nesciunt asperiores repellendus reiciendis praesentium similique molestias consectetur, amet accusamus! Repudiandae minima rem facere laudantium reiciendis odio iure in        ",
@@ -88,6 +110,7 @@ const MainPortFolio = (props) => {
 
   return (
     <div class="d-flex justify-content-center pb-5 mp-5">
+      <button onClick={uploadBlog}>upload blog</button>
       <div className="row" style={{ padding: "0px 70px" }}>
         {proftfolio.map((dt) => (
           <PortFolioCard dt={dt} />

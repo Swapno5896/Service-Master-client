@@ -21,9 +21,26 @@ const MainShop = (props) => {
   }, []);
   // console.log("props from shop", props);
   // console.log("loading info", props.isloading);
+  const uploadBlog = () => {
+    fetch('http://localhost:9000/addProducts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(shopData),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
   const shopData = [
     {
-      Img: img1,
+      Img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/product-2-1.jpg
+      `,
       Title: "Pro XL Drill",
       Rating: 4,
       PrivuousPrice: 300,
@@ -32,7 +49,8 @@ const MainShop = (props) => {
         "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis exercitationem natus quo doloribus, enim et maxime. Aperiam perspiciatis repellat vero voluptate eligendi adipisci eum porro assumenda harum, ab sed alias        ",
     },
     {
-      Img: img1,
+      Img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2016/08/product-1.jpg
+      `,
       Title: "Pro XL Drill",
       Rating: 4,
       PrivuousPrice: 300,
@@ -41,7 +59,8 @@ const MainShop = (props) => {
         "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis exercitationem natus quo doloribus, enim et maxime. Aperiam perspiciatis repellat vero voluptate eligendi adipisci eum porro assumenda harum, ab sed alias        ",
     },
     {
-      Img: img1,
+      Img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/product-3.jpg
+      `,
       Title: "Pro XL Drill",
       Rating: 4,
       PrivuousPrice: 300,
@@ -50,7 +69,8 @@ const MainShop = (props) => {
         "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis exercitationem natus quo doloribus, enim et maxime. Aperiam perspiciatis repellat vero voluptate eligendi adipisci eum porro assumenda harum, ab sed alias        ",
     },
     {
-      Img: img1,
+      Img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/product-4.jpg
+      `,
       Title: "Pro XL Drill",
       Rating: 4,
       PrivuousPrice: 300,
@@ -59,7 +79,8 @@ const MainShop = (props) => {
         "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis exercitationem natus quo doloribus, enim et maxime. Aperiam perspiciatis repellat vero voluptate eligendi adipisci eum porro assumenda harum, ab sed alias        ",
     },
     {
-      Img: img1,
+      Img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/product-5.jpg
+      `,
       Title: "Pro XL Drill",
       Rating: 4,
       PrivuousPrice: 300,
@@ -68,7 +89,8 @@ const MainShop = (props) => {
         "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis exercitationem natus quo doloribus, enim et maxime. Aperiam perspiciatis repellat vero voluptate eligendi adipisci eum porro assumenda harum, ab sed alias        ",
     },
     {
-      Img: img1,
+      Img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/product-6.jpg
+      `,
       Title: "Pro XL Drill",
       Rating: 4,
       PrivuousPrice: 300,
@@ -77,7 +99,8 @@ const MainShop = (props) => {
         "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis exercitationem natus quo doloribus, enim et maxime. Aperiam perspiciatis repellat vero voluptate eligendi adipisci eum porro assumenda harum, ab sed alias        ",
     },
     {
-      Img: img1,
+      Img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/product-7.jpg
+      `,
       Title: "Pro XL Drill",
       Rating: 4,
       PrivuousPrice: 300,
@@ -86,7 +109,8 @@ const MainShop = (props) => {
         "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis exercitationem natus quo doloribus, enim et maxime. Aperiam perspiciatis repellat vero voluptate eligendi adipisci eum porro assumenda harum, ab sed alias        ",
     },
     {
-      Img: img1,
+      Img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/product-8.jpg
+      `,
       Title: "Pro XL Drill",
       Rating: 4,
       PrivuousPrice: 300,
@@ -95,7 +119,8 @@ const MainShop = (props) => {
         "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis exercitationem natus quo doloribus, enim et maxime. Aperiam perspiciatis repellat vero voluptate eligendi adipisci eum porro assumenda harum, ab sed alias        ",
     },
     {
-      Img: img1,
+      Img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/h9-port-img-13.jpg
+      `,
       Title: "Pro XL Drill",
       Rating: 4,
       PrivuousPrice: 300,
@@ -104,7 +129,7 @@ const MainShop = (props) => {
         "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis exercitationem natus quo doloribus, enim et maxime. Aperiam perspiciatis repellat vero voluptate eligendi adipisci eum porro assumenda harum, ab sed alias        ",
     },
     {
-      Img: img1,
+      Img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2016/08/product-1.jpg`,
       Title: "Pro XL Drill",
       Rating: 4,
       PrivuousPrice: 300,
@@ -132,6 +157,7 @@ const MainShop = (props) => {
   }
   return (
     <div>
+      <button onClick={uploadBlog}>upload blog</button>
       {/* <h1>{props.isloading}</h1> */}
 
       <ol>

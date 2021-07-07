@@ -1,6 +1,5 @@
 import React from "react";
 import "./CurrierService.scss";
-import service from "../../../Images/service-1.png";
 const CurierService = () => {
   return (
     <div className='pb-3'>
@@ -27,7 +26,7 @@ const CurierService = () => {
           </div>
 
           <div className="col-md-6">
-            <img style={{ width: "100%" }} src={service} alt="" />
+            <img style={{ width: "100%" }} src='https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/h2-img-7.jpg' alt="" />
           </div>
         </div>
         {/* <button className="all-service-btn">SEE ALL SERVICES</button> */}
