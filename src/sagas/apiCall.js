@@ -1,5 +1,6 @@
+const rootUrl = 'https://murmuring-fjord-79691.herokuapp.com'
 export function getProduct() {
-  return fetch("https://jsonplaceholder.typicode.com/users")
+  return fetch(rootUrl + '/getProduct')
     .then((res) => res.json())
     .catch((err) => {
       throw err;
@@ -7,7 +8,7 @@ export function getProduct() {
 }
 
 export function getPortfolio() {
-  return fetch("https://jsonplaceholder.typicode.com/users")
+  return fetch(rootUrl + '/getPortfolio')
     .then((res) => res.json())
     .catch((err) => {
       throw err;
@@ -15,7 +16,7 @@ export function getPortfolio() {
 }
 
 export function getBlog() {
-  return fetch("https://cryptic-chamber-61162.herokuapp.com/getBlog")
+  return fetch(rootUrl + '/getBlog')
     .then((res) => res.json())
     .catch((err) => {
       throw err;

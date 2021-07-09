@@ -1,6 +1,7 @@
 import React from "react";
 
 const ShopCard = (props) => {
+  console.log('from shop card', props)
   const { Img, Title, Rating, PrivuousPrice, CurrentPrice, Description } =
     props.dt;
   return (

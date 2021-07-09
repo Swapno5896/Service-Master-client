@@ -1,7 +1,7 @@
 import React from "react";
 
 const PortFolioCard = (props) => {
-  const { img, Titile, Description } = props.dt;
+  const { img, Description, Titile } = props.dt;
   return (
     <div className="col-md-4">
       <div className="card h-100">
