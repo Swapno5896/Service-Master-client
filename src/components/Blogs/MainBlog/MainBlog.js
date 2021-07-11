@@ -50,11 +50,7 @@ const MainBlog = (props) => {
   }, []);
 
 
-  if (props.isloading == true) {
-    return (
-      <ShowLoading />
-    )
-  }
+
 
   return (
     <>

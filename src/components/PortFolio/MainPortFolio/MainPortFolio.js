@@ -22,12 +22,6 @@ const MainPortFolio = (props) => {
     props.loadPortfolioAsync();
   }, []);
 
-  if (props.isloading == true) {
-    return (
-      <ShowLoading />
-    )
-  }
-
 
   return (
     <div class="d-flex justify-content-center pb-5 mp-5">

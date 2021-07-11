@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 const ShowLoading = (props) => {
  return (
   <div
-   style={{ height: "700px" }}
+   style={{ height: "100%" }}
    class="d-flex justify-content-center align-items-center "
   >
    <div
