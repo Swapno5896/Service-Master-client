@@ -17,10 +17,10 @@ const AdminSidebar: React.FC<Iprops> = ({ openModal }) => {
                 <Link to="/deletBlog">Delet Blog</Link>
             </button>
             <button onClick={openModal}>
-                <Link to="/addProduct">Delet Blog</Link>
+                <Link to="/addProduct">Add Product</Link>
             </button>
             <button onClick={openModal}>
-                <Link to="/deletProduct">Delet Blog</Link>
+                <Link to="/deletProduct">Delet Product</Link>
             </button>
         </div>
     );

@@ -1,10 +1,16 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
+import { connect } from "react-redux";
+import { addToCart } from '../../../redux/action/action'
+const mapDispatchToProps = {
+ addToCart
+}
 const ShopCard = (props) => {
+ console.log('props from shop card', props)
  const { Img, CurrentPrice, Description, PrivuousPrice, Rating, Title, _id } = props.dt;
  let history = useHistory();
  const handleClick = (id) => {
-  console.log(id)
+  props.addToCart(id)
 
  }
  const shoDetail = (id) => {
@@ -29,4 +35,4 @@ const ShopCard = (props) => {
  );
 };
 
-export default ShopCard;
+export default connect(null, mapDispatchToProps)(ShopCard);

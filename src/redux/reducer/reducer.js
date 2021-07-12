@@ -7,6 +7,22 @@ const initState = {
   cart: [],
   isLoading: true,
 };
+const CartReducer = (state = initState, action) => {
+  switch (action.type) {
+    case type.ADD_TO_CART:
+      return {
+        ...state.cart, cart: [...state.cart, action.payload]
+      };
+    case type.REMOVE_FROM_CART:
+      const id = action.id
+      const reamingProduct = state.cart.filter(item => item !== id)
+      return {
+        ...state.cart, cart: reamingProduct
+      };
+    default:
+      return state;
+  }
+};
 
 const ProductReducer = (state = initState.product, action) => {
   switch (action.type) {
@@ -15,10 +31,7 @@ const ProductReducer = (state = initState.product, action) => {
         ...state,
         product: action.payload,
       };
-    case type.ADD_TO_CART:
-      return state;
-    case type.REMOVE_FROM_CART:
-      return state;
+
     default:
       return state;
   }
@@ -64,5 +77,6 @@ const Reducers = combineReducers({
   portfoilo: PortfolioReducer,
   product: ProductReducer,
   isLoading: loadingReducer,
+  cart: CartReducer
 });
 export default Reducers;

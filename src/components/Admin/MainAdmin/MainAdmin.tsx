@@ -48,23 +48,27 @@ const MainAdmin = () => {
         <div className='row' style={{ marginBottom: '400px' }}>
 
             <Router>
+                <div className='col-md-3' style={{ backgroundColor: 'gray' }}>
+                    <AdminSidebar openModal={openModal} />
 
-                <AdminSidebar openModal={openModal} />
+                </div>
 
-                <switch>
-                    <Route path='/addBlog'>
-                        <AddBlog openModal={openModal} modalIsOpen={modalIsOpen} closeModal={closeModal} />
-                    </Route>
-                    <Route path='/deletBlog'>
-                        <DeletBlog openModal={openModal} modalIsOpen={modalIsOpen} closeModal={closeModal} />
-                    </Route>
-                    <Route path='/addProduct'>
-                        <AddProduct openModal={openModal} modalIsOpen={modalIsOpen} closeModal={closeModal} />
-                    </Route>
-                    <Route path='/deletProduct'>
-                        <RemoveProduct openModal={openModal} modalIsOpen={modalIsOpen} closeModal={closeModal} />
-                    </Route>
-                </switch>
+                <div className='col-md-9'>
+                    <switch>
+                        <Route path='/addBlog'>
+                            <AddBlog openModal={openModal} modalIsOpen={modalIsOpen} closeModal={closeModal} />
+                        </Route>
+                        <Route path='/deletBlog'>
+                            <DeletBlog openModal={openModal} modalIsOpen={modalIsOpen} closeModal={closeModal} />
+                        </Route>
+                        <Route path='/addProduct'>
+                            <AddProduct openModal={openModal} modalIsOpen={modalIsOpen} closeModal={closeModal} />
+                        </Route>
+                        <Route path='/deletProduct'>
+                            <RemoveProduct openModal={openModal} modalIsOpen={modalIsOpen} closeModal={closeModal} />
+                        </Route>
+                    </switch>
+                </div>
             </Router>
 
 
