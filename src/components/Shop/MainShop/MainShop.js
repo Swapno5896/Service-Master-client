@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import img1 from "../../../Images/service-1.png";
-import SideBar from "../SideBar/SideBar";
+import SideBar from "../Cart/Cart";
 import { loadProductAsync } from "../../../redux/action/action";
 import ShowLoading from '../../ShowLoading/ShowLoading'
 import ShopCard from '../ShopCard/ShopCard'

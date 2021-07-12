@@ -9,6 +9,7 @@ import DetailBlog from "./components/Blogs/DetailBlog/DetailBlog.tsx";
 import MainAdmin from "./components/Admin/MainAdmin/MainAdmin";
 import NavBar from "./components/Home/NavBar/NavBar";
 import Footer from "../src/components/Home/Footer/Footer";
+import DetailProduct from "./components/Shop/DetailProduct/DetailProduct";
 const App = () => {
   return (
     <div>
@@ -23,6 +24,9 @@ const App = () => {
           </Route>
           <Route exact path="/shop">
             <MainShop />
+          </Route>
+          <Route exact path="/shop/:id">
+            <DetailProduct />
           </Route>
           <Route exact path="/portfolio">
             <MainPortFolio />
