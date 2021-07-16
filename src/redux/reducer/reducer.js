@@ -10,12 +10,13 @@ const initState = {
 const CartReducer = (state = initState, action) => {
   switch (action.type) {
     case type.ADD_TO_CART:
+      // const cartproduct = state.product.filter(item => item._id == id)
       return {
         ...state.cart, cart: [...state.cart, action.payload]
       };
     case type.REMOVE_FROM_CART:
       const id = action.id
-      const reamingProduct = state.cart.filter(item => item !== id)
+      const reamingProduct = state.product.filter(item => item._id !== id)
       return {
         ...state.cart, cart: reamingProduct
       };
