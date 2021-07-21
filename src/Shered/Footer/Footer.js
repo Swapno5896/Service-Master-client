@@ -1,11 +1,8 @@
 import React from "react";
-import {
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-  Link,
-
-} from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import curds from "../../../Images/cards.png";
+import curds from "../../Images/cards.png";
 import {
   faFacebookF,
   faInstagram,
@@ -15,7 +12,7 @@ import './Footer.css'
 const Footer = () => {
   return (
     <div
-
+      style={{ marginTop: '120px' }}
       className="row footer-container"
     >
       <div className="col-md-4 offset-md-2">
@@ -26,16 +23,18 @@ const Footer = () => {
         <small>(Available : 09:00am to 7:00pm)</small>
       </div>
       <div className="col-md-2 footer-link">
-        <Link className="nav-link" to="/blog">
-          Blog
+        <Router>
+          <Link className="nav-link" to="/blog">
+            Blog
 
-        </Link>
-        <Link className="nav-link" to="/portfolio">
-          Portfolio
-        </Link>
-        <Link className="nav-link" to="/shop">
-          Shop
-        </Link>
+          </Link>
+          <Link className="nav-link" to="/portfolio">
+            Portfolio
+          </Link>
+          <Link className="nav-link" to="/shop">
+            Shop
+          </Link>
+        </Router>
         <div className='footer-icons'>
           <span>
             <FontAwesomeIcon icon={faFacebookF} />

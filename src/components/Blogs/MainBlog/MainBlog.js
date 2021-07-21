@@ -6,7 +6,7 @@ import BlogCarrd from "../BlogCarrd/BlogCarrd";
 import img1 from "../../../Images/service-1.png";
 // import { useState } from "react";
 import { connect } from "react-redux";
-import ShowLoading from '../../ShowLoading/ShowLoading'
+import ShowLoading from '../../../Shered/ShowLoading/ShowLoading'
 import { loadBlogAsync } from "../../../redux/action/action";
 // export interface blogCardDataType {
 
@@ -35,14 +35,14 @@ import { loadBlogAsync } from "../../../redux/action/action";
 const mapStateToProps = (state) => {
   return {
     Blog: state.blog.blog,
-    isLoading: state.isLoading,
+    isLoading: state.isLoading.isLoading,
   };
 };
 const mapDispatchToProps = {
   loadBlogAsync,
 };
 const MainBlog = (props) => {
-  console.log("from blog", props);
+  console.log("from blog", props.isLoading);
 
 
   useEffect(() => {
@@ -51,9 +51,11 @@ const MainBlog = (props) => {
 
 
 
-
   return (
     <>
+      {
+        props.isLoading ? <ShowLoading /> : null
+      }
       <div className="d-flex justify-content-center">
         <div className="row w-75">
           {props.Blog?.map((dt) => (

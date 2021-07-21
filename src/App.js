@@ -7,8 +7,8 @@ import MainPortFolio from "./components/PortFolio/MainPortFolio/MainPortFolio";
 import MainBlog from "../src/components/Blogs/MainBlog/MainBlog.js";
 import DetailBlog from "./components/Blogs/DetailBlog/DetailBlog.tsx";
 import MainAdmin from "./components/Admin/MainAdmin/MainAdmin";
-import NavBar from "./components/Home/NavBar/NavBar";
-import Footer from "../src/components/Home/Footer/Footer";
+import NavBar from "./Shered/NavBar/NavBar";
+import Footer from "./Shered/Footer/Footer";
 import DetailProduct from "./components/Shop/DetailProduct/DetailProduct";
 const App = () => {
   return (
@@ -19,32 +19,32 @@ const App = () => {
           <Route exact path="/">
             <MainHome></MainHome>
           </Route>
-          <Route exact path="/about">
+          <Route path="/about">
             <MainAbout />
           </Route>
-          <Route exact path="/shop">
+          <Route path="/shop">
             <MainShop />
           </Route>
-          <Route exact path="/shop/:id">
+          <Route path="/shop/:id">
             <DetailProduct />
           </Route>
-          <Route exact path="/portfolio">
+          <Route path="/portfolio">
             <MainPortFolio />
           </Route>
 
-          <Route exact path="/blog">
+          <Route path="/blog">
             <MainBlog />
           </Route>
-          <Route exact path="/blog/:id">
+          <Route path="/blog/:id">
             <DetailBlog />
           </Route>
-          <Route exact path="/admin">
+          <Route path="/admin">
             <MainAdmin />
           </Route>
         </Switch>
-        <Footer></Footer>
-      </Router>
 
+      </Router>
+      <Footer></Footer>
     </div>
   );
 };
