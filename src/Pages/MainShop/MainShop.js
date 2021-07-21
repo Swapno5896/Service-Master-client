@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import img1 from "../../../Images/service-1.png";
-import SideBar from "../Cart/Cart";
-import { loadProductAsync } from "../../../redux/action/action";
-import ShopCard from '../ShopCard/ShopCard'
-import Cart from "../Cart/Cart";
+import SideBar from "../../components/Shop/Cart/Cart";
+import { loadProductAsync } from "../../redux/action/action";
+import ShopCard from '../../components/Shop/ShopCard/ShopCard'
+import Cart from "../../components/Shop/Cart/Cart";
 // icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'

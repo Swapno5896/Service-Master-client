@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import PortFolioCard from "../PortFolioCard/PortFolioCard";
-import { loadPortfolioAsync } from "../../../redux/action/action";
+import PortFolioCard from "../../components/PortFolio/PortFolioCard/PortFolioCard";
+import { loadPortfolioAsync } from "../../redux/action/action";
 import { connect } from "react-redux";
 
 

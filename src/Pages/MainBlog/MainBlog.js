@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
-import BlogCarrd from "../BlogCarrd/BlogCarrd";
+import BlogCarrd from "../../components/Blogs/BlogCarrd/BlogCarrd";
 // import BlogComments from './../BlogComments/BlogComments';
 // import SideBlogs from './../SideBlogs/SideBlogs';
 // import DetailBlog from '../DetailBlog/DetailBlog'
-import img1 from "../../../Images/service-1.png";
 // import { useState } from "react";
 import { connect } from "react-redux";
-import ShowLoading from '../../../Shered/ShowLoading/ShowLoading'
-import { loadBlogAsync } from "../../../redux/action/action";
+import ShowLoading from '../../Shered/ShowLoading/ShowLoading'
+import { loadBlogAsync } from "../../redux/action/action";
 // export interface blogCardDataType {
 
 //     title: string;

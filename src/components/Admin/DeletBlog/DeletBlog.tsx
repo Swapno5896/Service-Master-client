@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Modal from 'react-modal';
-import { IModalPropd, customStyles } from '../MainAdmin/MainAdmin'
+import { IModalPropd, customStyles } from '../../../Pages/MainAdmin/MainAdmin'
 
 interface Iblog {
   title: string;

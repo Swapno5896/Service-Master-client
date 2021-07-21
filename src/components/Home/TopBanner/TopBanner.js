@@ -1,8 +1,6 @@
 import React from "react";
 import "./TopBanner.css";
-import service from "../../../Images/service-1.png";
-import service2 from "../../../Images/service-2.jpg";
-import service3 from "../../../Images/service-3.png";
+
 const TopBanner = () => {
   return (
     <div

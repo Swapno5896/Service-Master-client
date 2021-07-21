@@ -5,11 +5,11 @@ import {
     Route,
 
 } from "react-router-dom";
-import AdminSidebar from '../Sidebar/AdminSidebar';
-import AddBlog from '../AddBlog/AddBlog';
-import DeletBlog from '../DeletBlog/DeletBlog';
-import AddProduct from '../AddProduct/AddProduct';
-import RemoveProduct from '../RemoveProduct/RemoveProduct';
+import AdminSidebar from '../../components/Admin/Sidebar/AdminSidebar';
+import AddBlog from '../../components/Admin/AddBlog/AddBlog';
+import DeletBlog from '../../components/Admin/DeletBlog/DeletBlog';
+import AddProduct from '../../components/Admin/AddProduct/AddProduct';
+import RemoveProduct from '../../components/Admin/RemoveProduct/RemoveProduct';
 
 // MODAL INTERFACE 
 export interface IModalPropd {

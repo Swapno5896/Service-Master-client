@@ -1,6 +1,5 @@
 import React from "react";
 import "./WorkingStyle.scss";
-import img1 from "../../../Images/service-1.png";
 const WorkingStyle = () => {
   return (
     <div className="WorkingStyle-container p-5 m-5">

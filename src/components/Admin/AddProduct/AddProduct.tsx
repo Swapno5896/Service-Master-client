@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import { IModalPropd, customStyles } from '../MainAdmin/MainAdmin'
+import { IModalPropd, customStyles } from '../../../Pages/MainAdmin/MainAdmin'
 Modal.setAppElement('#root');
 const AddProduct: React.FC<IModalPropd> = ({ openModal, modalIsOpen, closeModal }) => {
  return (

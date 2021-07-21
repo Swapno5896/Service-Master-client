@@ -1,6 +1,5 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import img1 from "../../../Images/service-1.png";
 // import { blogCardDataType } from '../MainBlog/MainBlog'
 // interface blogCardProps {
 //     dt: blogCardDataType

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import { IModalPropd, customStyles } from '../MainAdmin/MainAdmin'
+import { IModalPropd, customStyles } from '../../../Pages/MainAdmin/MainAdmin'
 import './AddBlog.css'
 
 // const customStyles = {
